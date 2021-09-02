@@ -1,10 +1,12 @@
 import React from 'react'
-const Searchbar = ({movies, setMovies}) => {
+
+
+const Searchbar = ({items, setItems}) => {
 
     const getRequest = async function (url) {
         console.log("Fetching", url);
         const response = await fetch(url);
-        return response.json();
+        return response.json(); 
     };
 
     const search = function(e){
@@ -18,10 +20,13 @@ const Searchbar = ({movies, setMovies}) => {
             for (const movie of data) {
                 console.log(movie.originalTitle);
             }
-            setMovies(data);
+            setItems(data);
+            
         })
     }
 
+
+   
 
 
     return (
