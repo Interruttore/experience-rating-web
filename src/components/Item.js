@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Item = () => {
+const Item = (item) => {
 
+    console.log(item.item);
     return (
         <div>
+            <p>{item.item.originalTitle} - {item.item.releaseDate}</p>
         </div>
     )
 }

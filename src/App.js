@@ -1,10 +1,10 @@
-import Searchbar from "./components/Searchbar";
+import SearchPage from "./components/SearchPage";
 
 
 function App() {
   return (
     <div className="App">
-      <Searchbar></Searchbar>
+      <SearchPage></SearchPage>
     </div>
   );
 }

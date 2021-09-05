@@ -2,19 +2,17 @@ import React from 'react';
 import { useState } from "react";
 
 import Searchbar from './Searchbar';
-import Item from './Item';
-
 
 const SearchPage = () => {
  
-    const [items, setItems] = useState();
-    var itemArray = items.map(movie => (
-        <Item movie={movie}></Item>
-    ))
+    var [itemsArray, setItemsArray] = useState([]);
 
+    
+     
     return (
         <div>
-            <Searchbar items={items} setItems={setItems}></Searchbar>
+            <Searchbar setItemsArray={setItemsArray}></Searchbar>
+            <ul>{itemsArray}</ul>
         </div>
     )
 }
