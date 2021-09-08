@@ -6,12 +6,11 @@ import Searchbar from './Searchbar';
 const SearchPage = () => {
  
     var [itemsArray, setItemsArray] = useState([]);
+    const [typeOfSearch, setTypeOfSearch] = useState("movie");
 
-    
-     
     return (
         <div>
-            <Searchbar setItemsArray={setItemsArray}></Searchbar>
+            <Searchbar setItemsArray={setItemsArray} typeOfSearch={typeOfSearch} setTypeOfSearch={setTypeOfSearch}></Searchbar>
             <ul>{itemsArray}</ul>
         </div>
     )

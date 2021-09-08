@@ -1,10 +1,12 @@
-import SearchPage from "./components/SearchPage";
+import Home from "./components/Home";
+import "./styles/reset.css"
 
 
 function App() {
   return (
     <div className="App">
-      <SearchPage></SearchPage>
+      <Home></Home>
+      
     </div>
   );
 }

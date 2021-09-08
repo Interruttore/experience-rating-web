@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  border: rgb(82, 101, 214) 1px solid;
+  margin: 20px;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.container .innerContainer {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .title {
+  color: #3f7db1;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.container .date,
+.genres {
+  font-size: 1em;
+  margin-top: 0.2em;
+  color: grey;
+}
+
+.container .overview {
+  margin-top: 1.3em;
+  word-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.container .poster {
+  object-fit: contain;
+  width: 170px;
+  flex: 0 1;
+}
+
+.container .voteForm {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.container .submitButton {
+  font-size: 1em;
+  margin-left: auto;
+}
+
+.container .form {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.container .formInput {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .innerFormInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .innerFormInput:first-child {
+  margin-left: auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
