@@ -24,7 +24,11 @@ const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
         setTypeOfSearch(e.target.searchParameters.value);
 
         switch (e.target.searchParameters.value) {
-            case "movie" || "tv":
+            case "movie":
+                URL =  `http://localhost:9000/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
+                break;
+
+            case "tv":
                 URL =  `http://localhost:9000/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
                 break;
 
@@ -44,8 +48,9 @@ const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
             console.log("Data received: ", data);
             console.log("typeOfSearch: ", typeOfSearch);
             setItemsArray(data.map((item) => (
-                <Item item={item} key={item.key} typeOfSearch={e.target.searchParameters.value}></Item>
-            )))
+                 <Item item={item} key={item.key} typeOfSearch={e.target.searchParameters.value}></Item>
+                ) 
+            ))
         })
     }
 

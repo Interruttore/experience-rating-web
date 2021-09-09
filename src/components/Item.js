@@ -6,11 +6,7 @@ const Item = ({item, typeOfSearch}) => {
     useEffect(() => {
         document.getElementById("dateForm").valueAsDate = new Date();
     })
-
-   
-    console.log(item, typeOfSearch);
-
-    if(typeOfSearch === "movie"){
+    if(typeOfSearch === "movie" || typeOfSearch === "tv"){
         return (
             <div className="container">
                 <img className="poster" alt="poster" src={"https://image.tmdb.org/t/p/original/" + item.posterPath}></img>
