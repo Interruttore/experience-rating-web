@@ -7,9 +7,15 @@ const Item = ({item, typeOfSearch}) => {
         document.getElementById("dateForm").valueAsDate = new Date();
     })
     if(typeOfSearch === "movie" || typeOfSearch === "tv"){
+        let posterPath;
+        if(item.posterPath !== null){
+            posterPath = "https://image.tmdb.org/t/p/original/" + item.posterPath;
+        }else{
+            posterPath = '/missing_poster.png';
+        }
         return (
             <div className="container">
-                <img className="poster" alt="poster" src={"https://image.tmdb.org/t/p/original/" + item.posterPath}></img>
+                <img className="poster posterBorder" alt="poster" src={posterPath}></img>
                 <div className="innerContainer">
                     <h2 className="title" >{item.originalTitle} ({item.releaseDate.slice(0, 4)})</h2>
                     <span className="date">Release date: {item.releaseDate}</span>
@@ -39,7 +45,13 @@ const Item = ({item, typeOfSearch}) => {
     if(typeOfSearch === "book"){
         return(
             <div className="container">
-                <img className="poster" alt="poster" src={"http://covers.openlibrary.org/b/isbn/" + item.isbn + "-M.jpg"}></img>
+                <img className="poster posterBorder" alt="cover" src={"http://covers.openlibrary.org/b/isbn/" + item.isbn + "-M.jpg"}
+                 onError={(e) => {
+                    e.target=null; 
+                    e.target.src='../../public/missing_cover.png';
+                    
+                }}
+                ></img>
                 <div className="innerContainer">
                     <h2 className="title" >{item.title} ({item.firstPublishYear})</h2>
                 

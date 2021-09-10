@@ -40,6 +40,10 @@
   flex: 0 1;
 }
 
+.container .posterBorder {
+  border: black 2px solid;
+}
+
 .container .voteForm {
   width: 30px;
   margin-right: 5px;
