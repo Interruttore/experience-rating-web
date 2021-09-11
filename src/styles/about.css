@@ -1,0 +1,40 @@
+.about--container {
+  display: flex;
+  flex-direction: column;
+  margin: 3%10%;
+}
+
+.about--container h1 {
+  font-size: 3em;
+  margin-bottom: 10%;
+}
+
+.about--container .section-container .logo {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.about--container .section-container ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.about--container .section-container a {
+  color: rgb(127, 157, 255);
+}
+
+.about--container .section-container {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.about--container .section-container .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.about--container .inner-container {
+  display: flex;
+  flex-direction: column;
+}
