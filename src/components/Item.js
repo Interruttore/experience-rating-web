@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Add from "./Add";
 import "../styles/item.css"
 import "../styles/buttons.css"
 
@@ -7,6 +8,8 @@ const Item = ({item, typeOfSearch}) => {
     useEffect(() => {
         document.getElementById("dateForm").valueAsDate = new Date();
     })
+
+    
 
     if(typeOfSearch === "movie" || typeOfSearch === "tv"){
         let posterPath;
@@ -24,7 +27,11 @@ const Item = ({item, typeOfSearch}) => {
                     <span className="genres">{item.genresName.join(", ")}</span>
                     <p className="overview">{item.overview}</p>
 
-                    <form className="form">
+                    <form className="form" onSubmit={(e) => Add(e,  typeOfSearch, { originalTitle: item.originalTitle,
+                                                                                    releaseDate: item.releaseDate, 
+                                                                                    genresName: item.genresName, 
+                                                                                    overview: item.overview,
+                                                                                    posterPath: item.posterPath})}>
                         <div className="form-input">
                             <div className="inner-form-input tooltip">
                                 <label htmlFor="voteForm">Vote</label>
@@ -32,7 +39,7 @@ const Item = ({item, typeOfSearch}) => {
                                 <input className="voteForm" type="number" id="voteForm" name="vote" min="0" max="10" defaultValue="0"></input>
                             </div>
                             <div className="inner-form-input tooltip">
-                                <label htmlFor="voteForm">Date Watched</label>
+                                <label htmlFor="dateForm">Date Watched</label>
                                 <span className="tooltip-text">Specify the date</span>
                                 <input className="dateForm" type="date" id="dateForm" name="dateForm" ></input>
                             </div>
@@ -57,7 +64,8 @@ const Item = ({item, typeOfSearch}) => {
                 <div className="inner-container">
                     <h2 className="title" >{item.title} ({item.firstPublishYear})</h2>
                 
-                    <form className="form">
+                    <form className="form" onSubmit={(e) => Add(e,  typeOfSearch, { title: item.title,
+                                                                                    firstPublishYear: item.firstPublishYear,})}>
                         <div className="form-input">
                             <div className="inner-form-input tooltip">
                                 <label htmlFor="voteForm">Vote</label>
@@ -69,7 +77,8 @@ const Item = ({item, typeOfSearch}) => {
                                 <span className="tooltip-text">Specify the date</span>
                                 <input className="dateForm" type="date" id="dateForm" name="dateForm" ></input>
                             </div>
-                        <button type="submit" className="submit-button">Add to collection</button>
+                            <button type="submit" className="submit-button bn1"><i className="far fa-plus-square"></i> Add to collection</button>
+
                         </div>
                     </form>
                 </div>
