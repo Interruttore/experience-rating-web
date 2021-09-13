@@ -1,9 +1,9 @@
+import "../styles/searchbar.css"
 import React from 'react'
 import Item from './Item';
 
-import "../styles/searchbar.css"
 
-const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
+const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch, setSearched, searched}) => {
 
     let URL;
     let searchString = "Search movies..."; 
@@ -21,6 +21,7 @@ const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
         console.log("Query:", e.target.query.value)  
         console.log("Search Parameters:", e.target.searchParameters.value)  
         */
+        setSearched(true);
         setTypeOfSearch(e.target.searchParameters.value);
 
         switch (e.target.searchParameters.value) {
@@ -56,7 +57,7 @@ const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
 
     switch (typeOfSearch) {
         case "movie":
-            searchString = "Search movies...";
+            searchString = "Search movies... ";
             break;
         case "tv":
             searchString = "Search TV shows...";
@@ -72,25 +73,25 @@ const Searchbar = ({setItemsArray, typeOfSearch, setTypeOfSearch}) => {
             break;
     }
 
+
+
     return (
-        <div>
-            <form onSubmit={search} className="queryForm">
-                <label htmlFor="query"></label>
-                <input className="searchbar" type="text" id="query" placeholder={searchString} name="query"></input>
-                <div className="select">
-                    <select id="searchParameters" onChange={(e) => {
-                                setTypeOfSearch(e.target.value);
-                    }}>
-                        <option value="movie">Movies</option>
-                        <option value="tv">TV Shows</option>
-                        <option value="book">Books</option>
-                        <option value="game">Games</option>
-                    </select>
-                    <div className="select_arrow"></div>
-                </div>
-                <button type="submit" className="submitButton">Search</button>
-            </form>
-        </div>
+        <form onSubmit={search} className={searched ? "query-form--searched": "query-form"}>
+            <label htmlFor="query"></label>
+            <input className="searchbar" type="text" id="query" placeholder={searchString} name="query"></input>
+            <div className="select">
+                <select id="searchParameters" onChange={(e) => {
+                            setTypeOfSearch(e.target.value);
+                }}>
+                    <option value="movie">Movies</option>
+                    <option value="tv">TV Shows</option>
+                    <option value="book">Books</option>
+                    <option value="game">Games</option>
+                </select>
+                <div className="select-arrow"></div>
+            </div>
+            <button type="submit" className="submit-button">Search</button>
+        </form>
     )
 }
 

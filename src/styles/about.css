@@ -1,22 +1,27 @@
 .about--container {
   display: flex;
   flex-direction: column;
-  margin: 3%10%;
+  margin: 3% 10%;
+  font-size: 1em;
 }
 
 .about--container h1 {
-  font-size: 3em;
-  margin-bottom: 10%;
+  font-size: 2.3em;
+  margin-bottom: 7%;
 }
 
 .about--container .section-container .logo {
-  width: 100px;
-  margin-right: 20px;
+  order: 1;
+  width: 150px;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
 
-.about--container .section-container ul {
+.about--container .section-container .api-list {
   list-style: square;
+  display: inline-block;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 .about--container .section-container a {
@@ -25,16 +30,32 @@
 
 .about--container .section-container {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 3%;
+  border-left: solid #fb8500 2px;
+  border-bottom: solid #fb8500 2px;
+  border-bottom-left-radius: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.about--container .contacts {
+  margin-top: 10%;
 }
 
 .about--container .section-container .title {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 32px;
   margin-bottom: 4px;
 }
 
 .about--container .inner-container {
+  order: 2;
   display: flex;
   flex-direction: column;
+}
+
+.about--container .icon {
+  font-size: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
 }

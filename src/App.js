@@ -1,3 +1,5 @@
+import "./styles/reset.css"
+import "./styles/main.css"
 import Home from "./components/Home";
 import SearchPage from "./components/SearchPage";
 import Navbar from "./components/Navbar";
@@ -7,13 +9,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import "./styles/reset.css"
 
 
 function App() {
   return (
     <div className="App">
-      
       <Router>
         <Switch>
             <Route path="/search">

@@ -1,75 +1,75 @@
-.container {
+.item--container {
   display: flex;
   flex-direction: row;
-  border: rgb(82, 101, 214) 1px solid;
+  border: #023047 1px solid;
   margin: 20px;
   border-radius: 14px;
   padding: 10px;
 }
 
-.container .innerContainer {
+.item--container .inner-container {
   width: 100%;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.container .title {
+.item--container .title {
   color: #3f7db1;
   font-size: 1.4em;
   font-weight: bold;
   margin-bottom: 2px;
 }
 
-.container .date,
+.item--container .date,
 .genres {
   font-size: 1em;
   margin-top: 0.2em;
   color: grey;
 }
 
-.container .overview {
+.item--container .overview {
   margin-top: 1.3em;
   word-spacing: 1px;
   font-size: 1.2em;
 }
 
-.container .poster {
+.item--container .poster {
   object-fit: contain;
   width: 170px;
   flex: 0 1;
 }
 
-.container .posterBorder {
+.item--container .poster-border {
   border: black 2px solid;
 }
 
-.container .voteForm {
+.item--container .voteForm {
   width: 30px;
   margin-right: 5px;
 }
 
-.container .submitButton {
+.item--container .submit-button {
   font-size: 1em;
   margin-left: auto;
 }
 
-.container .form {
+.item--container .form {
   margin-top: auto;
   align-self: flex-end;
 }
 
-.container .formInput {
+.item--container .form-input {
   display: flex;
   flex-direction: row;
 }
 
-.container .innerFormInput {
+.item--container .inner-form-input {
   display: flex;
   flex-direction: column;
 }
 
-.container .innerFormInput:first-child {
+.item--container .inner-form-input:first-child {
   margin-left: auto;
 }
 
@@ -79,7 +79,7 @@
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.tooltip .tooltip-text {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -101,7 +101,7 @@
 }
 
 /* Tooltip arrow */
-.tooltip .tooltiptext::after {
+.tooltip .tooltip-text::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -113,7 +113,7 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
