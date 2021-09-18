@@ -1,0 +1,38 @@
+.collection--container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 95%;
+  align-items: center;
+}
+
+.collection--container-displaying .no-items {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.collection--container-displaying h3 {
+  font-size: 2em;
+}
+
+.collection--container-displaying p {
+  font-size: 1.8em;
+}
+
+.collection--container-displaying p a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #219ebc;
+}
+
+.collection--container-displaying {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.collection--container-displaying ul {
+  width: 95%;
+}

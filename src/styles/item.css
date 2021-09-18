@@ -21,7 +21,7 @@
   margin-bottom: 2px;
 }
 
-.item--container .date,
+.item--container .releaseDate,
 .genres {
   font-size: 1em;
   margin-top: 0.2em;
@@ -31,6 +31,14 @@
 .item--container .overview {
   margin-top: 1.3em;
   word-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.item--container .vote {
+  font-size: 1.2em;
+}
+
+.item--container .dateWatched {
   font-size: 1.2em;
 }
 
@@ -45,13 +53,34 @@
 }
 
 .item--container .voteForm {
-  width: 30px;
+  width: 60px;
   margin-right: 5px;
+  font-size: 1.4em;
+}
+
+.item--container .dateForm {
+  font-size: 1.4em;
+  margin-right: 20px;
 }
 
 .item--container .submit-button {
   font-size: 1em;
   margin-left: auto;
+  background-color: #219ebc;
+}
+
+.item--container .submit-button:hover {
+  background-color: green;
+}
+
+.item--container .remove-button {
+  font-size: 1em;
+  margin-left: auto;
+  background-color: rgba(204, 77, 77, 0.671);
+}
+
+.item--container .remove-button:hover {
+  background-color: red;
 }
 
 .item--container .form {

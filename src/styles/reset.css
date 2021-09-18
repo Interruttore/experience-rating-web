@@ -130,6 +130,6 @@ table {
 
 html,
 body {
-  min-height: 100% !important;
   height: 100%;
+  width: 100%;
 }

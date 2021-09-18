@@ -26,7 +26,14 @@
   position: relative;
 }
 
+.query-form .select option {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 501;
+}
+
 .query-form .select select {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 501;
   font-size: 1em;
   width: 100%;
   cursor: pointer;
@@ -122,6 +129,10 @@
   background-color: #ffb703;
   transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
+.query-form--searched .select option {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 501;
+}
 
 .query-form--searched .select {
   margin-left: 4px;
@@ -130,6 +141,8 @@
 }
 
 .query-form--searched .select select {
+  font-family: "Font Awesome 5 Free", "Roboto";
+  font-weight: 501;
   font-size: 1em;
   width: 100%;
   cursor: pointer;

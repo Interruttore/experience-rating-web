@@ -1,15 +1,13 @@
-import React from 'react'
-import Collection from './Collection';
-
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-    return (
-        <div>
-           <p>HOME</p>
-            <Collection></Collection>
-        </div>
-    )
-}
+	return (
+		<div>
+			<p>HOME</p>
+			<Link to="/collection">Collection</Link>
+		</div>
+	);
+};
 
 export default Home;
