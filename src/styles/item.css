@@ -1,0 +1,148 @@
+.item--container {
+  display: flex;
+  flex-direction: row;
+  border: #023047 1px solid;
+  margin: 20px;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.item--container .inner-container {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item--container .title {
+  color: #3f7db1;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.item--container .releaseDate,
+.genres {
+  font-size: 1em;
+  margin-top: 0.2em;
+  color: grey;
+}
+
+.item--container .overview {
+  margin-top: 1.3em;
+  word-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.item--container .vote {
+  font-size: 1.2em;
+}
+
+.item--container .dateWatched {
+  font-size: 1.2em;
+}
+
+.item--container .poster {
+  object-fit: contain;
+  width: 170px;
+  flex: 0 1;
+}
+
+.item--container .poster-border {
+  border: black 2px solid;
+}
+
+.item--container .voteForm {
+  width: 60px;
+  margin-right: 5px;
+  font-size: 1.4em;
+}
+
+.item--container .dateForm {
+  font-size: 1.4em;
+  margin-right: 20px;
+}
+
+.item--container .submit-button {
+  font-size: 1em;
+  margin-left: auto;
+  background-color: #219ebc;
+}
+
+.item--container .submit-button:hover {
+  background-color: green;
+}
+
+.item--container .remove-button {
+  font-size: 1em;
+  margin-left: auto;
+  background-color: rgba(204, 77, 77, 0.671);
+}
+
+.item--container .remove-button:hover {
+  background-color: red;
+}
+
+.item--container .form {
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.item--container .form-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.item--container .inner-form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.item--container .inner-form-input:first-child {
+  margin-left: auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
