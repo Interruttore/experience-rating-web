@@ -46,7 +46,7 @@ const Item = ({ item, typeOfSearch }) => {
 						<form
 							className="form"
 							onSubmit={(e) =>
-								Remove(e, (setIsPresent = { setIsPresent }), typeOfSearch, {
+								Remove(e, setIsPresent, typeOfSearch, {
 									id: item.id,
 									originalTitle: item.originalTitle,
 									releaseDate: item.releaseDate,
@@ -88,7 +88,7 @@ const Item = ({ item, typeOfSearch }) => {
 						<form
 							className="form"
 							onSubmit={(e) =>
-								Add(e, (setIsPresent = { setIsPresent }), typeOfSearch, {
+								Add(e, setIsPresent,  typeOfSearch, {
 									id: item.id,
 									originalTitle: item.originalTitle,
 									releaseDate: item.releaseDate,

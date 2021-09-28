@@ -28,7 +28,7 @@ const Remove = function (e, setIsPresent, typeOfSearch, itemToRemove) {
 		} else {
 			console.log("No movies present in the collection");
 		}
-		//setIsPresent(false);
+		setIsPresent(false);
 		break;
 
 	case "tv":
