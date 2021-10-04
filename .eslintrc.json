@@ -19,19 +19,19 @@
     ],
     "rules": {
         "indent": [
-            "warning",
+            "warn",
             "tab"
         ],
         "linebreak-style": [
-            "warning",
+            "warn",
             "windows"
         ],
         "quotes": [
-            "warning",
+            "warn",
             "double"
         ],
         "semi": [
-            "warning",
+            "warn",
             "always"
         ]
     }
