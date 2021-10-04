@@ -25,7 +25,7 @@ const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 		}
 		localStorage.setItem("movies", JSON.stringify(movies));
 		console.log("Is function see:", setIsPresent);
-		//setIsPresent(true);
+		setIsPresent(true);
 		break;
 
 	case "tv":
