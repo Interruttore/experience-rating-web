@@ -26,15 +26,15 @@ const Searchbar = ({
 
 		switch (e.target.searchParameters.value) {
 		case "movie":
-			URL = `http://localhost:9000/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
+			URL = `https://experience-rating-server.herokuapp.com/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
 			break;
 
 		case "tv":
-			URL = `http://localhost:9000/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
+			URL = `https://experience-rating-server.herokuapp.com/api/${e.target.searchParameters.value}?query=${e.target.query.value}&language=en-US&page=1`;
 			break;
 
 		case "book":
-			URL = `http://localhost:9000/api/${e.target.searchParameters.value}?title=${e.target.query.value}`;
+			URL = `https://experience-rating-server.herokuapp.com/api/${e.target.searchParameters.value}?title=${e.target.query.value}`;
 			break;
 
 		case "game":
