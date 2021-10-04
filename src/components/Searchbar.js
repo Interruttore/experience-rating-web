@@ -2,6 +2,7 @@ import "../styles/searchbar.css";
 import React from "react";
 import Item from "./Item";
 import PropTypes from "prop-types";
+import "../styles/spinner.css";
 
 const Searchbar = ({
 	setItemsArray,
@@ -44,9 +45,12 @@ const Searchbar = ({
 		default:
 			break;
 		}
+		setItemsArray(
+			<div className="cssload-container">
+				<div className="cssload-whirlpool"></div>
+			</div>
+		);
 		getRequest(URL).then((data) => {
-			// console.log("Data received: ", data);
-			// console.log("typeOfSearch: ", typeOfSearch);
 			setItemsArray(
 				data.map((item) => {
 					return (

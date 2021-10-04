@@ -24,7 +24,6 @@ const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 			movies.push(itemToAdd);
 		}
 		localStorage.setItem("movies", JSON.stringify(movies));
-		console.log("Is function see:", setIsPresent);
 		setIsPresent(true);
 		break;
 
@@ -47,7 +46,7 @@ const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 		} else {
 			tvs.push(itemToAdd);
 		}
-		//setIsPresent(true);
+		setIsPresent(true);
 		localStorage.setItem("tvs", JSON.stringify(tvs));
 		break;
 
