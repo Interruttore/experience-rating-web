@@ -1,0 +1,22 @@
+.home--container h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.home--container p {
+  margin: 10px 50px;
+}
+.home--container p a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #219ebc;
+}
+
+.home--container .searchP {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 50px;
+}

@@ -20,6 +20,7 @@ const CheckStorage = function (typeOfSearch, itemToCheck) {
 
 	case "tv":
 		let tvs = [];
+		console.log("Checking for tv");
 		const tvsJSON = localStorage.getItem("tvs");
 
 		if (tvsJSON !== null) {

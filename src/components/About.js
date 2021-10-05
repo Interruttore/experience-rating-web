@@ -92,9 +92,9 @@ const About = () => {
 							<a
 								target="_blank"
 								rel="noreferrer"
-								href="https://github.com/Interruttore"
+								href="https://github.com/andrea-pietronave"
 							>
-								https://github.com/Interruttore
+								https://github.com/andrea-pietronave
 							</a>
 						</li>
 					</ul>

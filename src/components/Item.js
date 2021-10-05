@@ -45,16 +45,7 @@ const Item = ({ item, typeOfSearch }) => {
 
 						<form
 							className="form"
-							onSubmit={(e) =>
-								Remove(e, setIsPresent, typeOfSearch, {
-									id: item.id,
-									originalTitle: item.originalTitle,
-									releaseDate: item.releaseDate,
-									genresName: item.genresName,
-									overview: item.overview,
-									posterPath: item.posterPath,
-								})
-							}
+							onSubmit={(e) => Remove(e, setIsPresent, typeOfSearch, item.id)}
 						>
 							<div className="form-input">
 								<button type="submit" className="remove-button bn1">
@@ -88,7 +79,7 @@ const Item = ({ item, typeOfSearch }) => {
 						<form
 							className="form"
 							onSubmit={(e) =>
-								Add(e, setIsPresent,  typeOfSearch, {
+								Add(e, setIsPresent, typeOfSearch, {
 									id: item.id,
 									originalTitle: item.originalTitle,
 									releaseDate: item.releaseDate,
@@ -113,6 +104,7 @@ const Item = ({ item, typeOfSearch }) => {
 										max="10"
 										step="0.5"
 										defaultValue="0"
+										required
 									></input>
 								</div>
 								<div className="inner-form-input tooltip">
@@ -123,6 +115,7 @@ const Item = ({ item, typeOfSearch }) => {
 										type="date"
 										id="dateForm"
 										name="dateForm"
+										required
 									></input>
 								</div>
 								<button type="submit" className="submit-button bn1">

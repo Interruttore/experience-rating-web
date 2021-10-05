@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-const Remove = function (e, setIsPresent, typeOfSearch, itemToRemove) {
+const Remove = function (e, setIsPresent, typeOfSearch, ID) {
 	e.preventDefault();
 
 	// console.log(typeOfSearch, originalTitle, releaseDate, genresName, overview, e.target.dateForm.value, e.target.voteForm.value);
@@ -11,9 +11,7 @@ const Remove = function (e, setIsPresent, typeOfSearch, itemToRemove) {
 		if (moviesJSON !== null) {
 			if (moviesJSON.length !== 0) {
 				movies = JSON.parse(moviesJSON);
-				const index = movies.findIndex(
-					(element) => element.id === itemToRemove.id
-				);
+				const index = movies.findIndex((element) => element.id === ID);
 				if (index !== -1) {
 					movies.splice(index, 1);
 					if (movies.length === 0) {
@@ -38,9 +36,7 @@ const Remove = function (e, setIsPresent, typeOfSearch, itemToRemove) {
 		if (tvsJSON !== null) {
 			if (tvsJSON.length !== 0) {
 				tvs = JSON.parse(tvsJSON);
-				const index = tvs.findIndex(
-					(element) => element.id === itemToRemove.id
-				);
+				const index = tvs.findIndex((element) => element.id === ID);
 				if (index !== -1) {
 					tvs.splice(index, 1);
 					if (tvs.length === 0) {
@@ -55,7 +51,7 @@ const Remove = function (e, setIsPresent, typeOfSearch, itemToRemove) {
 		} else {
 			console.log("No TV shows present in the collection");
 		}
-		//setIsPresent(false);
+		setIsPresent(false);
 
 		break;
 
