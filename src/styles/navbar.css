@@ -25,3 +25,8 @@
   background-color: #ffb703;
   color: white;
 }
+
+.topnav .logo {
+  width: 30px;
+  margin: 0 20px;
+}

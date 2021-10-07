@@ -2,11 +2,11 @@
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  margin: 15px 0;
+  margin: 25px 0;
 }
 
 .home--container p {
-  margin: 10px 50px;
+  margin: 15px 15%;
 }
 .home--container p a {
   font-size: 1em;
