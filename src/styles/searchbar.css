@@ -27,6 +27,7 @@
 }
 
 .query-form .select option {
+  background-color: white;
   font-family: "Font Awesome 5 Free", "Roboto";
   font-weight: 501;
 }

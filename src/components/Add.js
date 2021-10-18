@@ -2,7 +2,9 @@
 const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 	e.preventDefault();
 
-	// console.log(typeOfSearch, originalTitle, releaseDate, genresName, overview, e.target.dateForm.value, e.target.voteForm.value);
+	const tDate = new Date();
+	itemToAdd["dateAdded"] = tDate.toLocaleDateString();
+	console.log("willy", itemToAdd);
 	switch (typeOfSearch) {
 	case "movie":
 		let movies = [];
@@ -11,7 +13,6 @@ const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 		if (moviesJSON !== null) {
 			if (moviesJSON.length !== 0) {
 				movies = JSON.parse(moviesJSON);
-				console.log(movies);
 				if (
 					movies.find((element) => element.id === itemToAdd.id) !== undefined
 				) {
@@ -34,7 +35,6 @@ const Add = function (e, setIsPresent, typeOfSearch, itemToAdd) {
 		if (tvsJSON !== null) {
 			if (tvsJSON.length !== 0) {
 				tvs = JSON.parse(tvsJSON);
-				console.log(tvs);
 				if (
 					tvs.find((element) => element.id === itemToAdd.id) !== undefined
 				) {

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 	return (
 		<div className="topnav">
+			<img className="logo" src="../logoWhiteBorder.svg"></img>
 			<Link
 				to="/"
 				className={window.location.pathname === "/" ? "active" : null}

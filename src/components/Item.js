@@ -17,9 +17,7 @@ const Item = ({ item, typeOfSearch }) => {
 			posterPath = "/missing_poster.png";
 		}
 
-		// console.log(item);
 		if (isPresent) {
-			console.log(item.originalTitle, "Present in collection");
 			return (
 				<div className="item--container">
 					<img
@@ -40,8 +38,8 @@ const Item = ({ item, typeOfSearch }) => {
 						</span>
 						<span className="genres">{item.genresName.join(", ")}</span>
 						<p className="overview">{item.overview}</p>
-						<p className="vote">{item.vote}</p>
-						<p className="dateWatched">{item.dateWatched}</p>
+						<p className="vote">Vote: {item.vote}</p>
+						<p className="dateWatched">Date Watched: {item.dateWatched}</p>
 
 						<form
 							className="form"

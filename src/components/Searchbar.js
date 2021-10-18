@@ -106,7 +106,9 @@ const Searchbar = ({
 					<option value="movie">&#xf008; Movies</option>
 					<option value="tv">&#xf26c; TV Shows</option>
 					<option value="book">&#xf02d; Books</option>
-					<option value="game">&#xf11b; Games</option>
+					<option disabled value="game">
+						&#xf11b; Games
+					</option>
 				</select>
 				<div className="select-arrow"></div>
 			</div>
