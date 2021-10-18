@@ -1,5 +1,7 @@
 # Experience Rating Web
 
+[Link to site](https://main.d3hnnrbdhl814g.amplifyapp.com)
+
 ## Description
 
 Experience Rating is a web app where you can collect and keep track of movies and TV shows watched, books read or games played.  
